@@ -16,7 +16,10 @@
                 break;
             case 'category_update':
                 include 'category/c_update.php';
-                break;             
+                break;
+            case 'category_insert':
+                include 'category/c_insert.php';
+                break;              
            default:
                echo "";
                break;

@@ -20,15 +20,25 @@
                 </tr>
             </thead>
             <tbody>
+
+            <?php
+            
+            $query = mysqli_query($conn, "SELECT * FROM tbl_category ORDER BY id_category DESC");
+            $no = 0;
+            while ($data = mysqli_fetch_array($query)) {
+                $no++;
+            ?>
+            
                 <tr>
-                    <td>1</td>
-                    <td><img src="../../assets/image/mardira.jpg"></td>
-                    <td>Matematika</td>
+                    <td><?= $no?></td>
+                    <td><img src="../../assets/images/<?= $data['img_category']?>"></td>
+                    <td><?= $data['name_category']?></td>
                     <td>
                         <a href="?hal=category_update" class="button-warning"><span class="fa fa-cog"></span></a>
                         <a href="#" class="button-delete"><span class="fa fa-trash"></span></a>
                     </td>
                 </tr>
+            <?php }?>
             </tbody>
         </table>
     </div>
