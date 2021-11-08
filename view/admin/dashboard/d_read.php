@@ -3,8 +3,6 @@
   if(!defined('INDEX')) die('');
 
 ?>
-
-
 <h2 class="dashboard-title">Beranda</h2>
 <div class="dashboard-cards">
     <div class="card-single">
