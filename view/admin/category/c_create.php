@@ -12,14 +12,13 @@
         <form class="form-type" action="?hal=category_insert" method="post" enctype="multipart/form-data">
             <div class="input-form">
                 <label for="var1">Gambar</label>
-                <input type="file" name="gambar" id="var1" required>
+                <input type="file" name="image" id="var1" required>
             </div><br>
             <div class="input-form">
                 <label for="var2">Nama Kategori</label>
-                <input type="text" name="kategori" id="var2" required>
+                <input type="text" name="category" id="var2" required>
             </div>
             <button type="submit">Simpan</button>
-            <button type="reset">Reset</button>
         </form>
     </div>
 </div>

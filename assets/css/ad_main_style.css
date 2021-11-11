@@ -149,7 +149,7 @@ header{
     width: 38px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../image/vue.png');
+    background-image: url('../images/mardira.jpg');
     border-radius: 50%;
 }
 
@@ -408,20 +408,6 @@ form.form-type input:valid{
     border-radius: 7px;
     cursor: pointer;
 }
-
-.table-card form.form-type button[type='reset']{
-    border: none;
-    padding: .5rem 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    background: orange;
-    color: #fff;
-    border-radius: 7px;
-    cursor: pointer;
-}
-
-
-
 
 
 

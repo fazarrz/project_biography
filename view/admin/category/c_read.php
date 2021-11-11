@@ -34,8 +34,8 @@
                     <td><img src="../../assets/images/<?= $data['img_category']?>"></td>
                     <td><?= $data['name_category']?></td>
                     <td>
-                        <a href="?hal=category_update" class="button-warning"><span class="fa fa-cog"></span></a>
-                        <a href="#" class="button-delete"><span class="fa fa-trash"></span></a>
+                        <a href="?hal=category_update&id=<?= $data['id_category']?>" class="button-warning"><span class="fa fa-cog"></span></a>
+                        <a href="?hal=category_delete&id=<?= $data['id_category']?>&foto=<?= $data['img_category']?>" class="button-delete"><span class="fa fa-trash"></span></a>
                     </td>
                 </tr>
             <?php }?>

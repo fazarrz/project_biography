@@ -14,16 +14,19 @@
             case 'category_create':
                 include 'category/c_create.php';
                 break;
+            case 'category_insert':
+                include 'category/c_insert.php';
+                break;  
             case 'category_update':
                 include 'category/c_update.php';
                 break;
-            case 'category_insert':
-                include 'category/c_insert.php';
+            case 'category_delete':
+                include 'category/c_delete.php';
+                break;
+            case 'category_edit':
+                include 'category/c_edit.php';
                 break;              
-           default:
-               echo "";
-               break;
-       }
+        }
    }else{
         include 'dashboard/d_read.php';
    }
