@@ -25,7 +25,9 @@
                 break;
             case 'category_edit':
                 include 'category/c_edit.php';
-                break;              
+                break;
+            default:
+                header('Location:index.php');
         }
    }else{
         include 'dashboard/d_read.php';

@@ -314,6 +314,17 @@ section.recent{
     border-radius: 7px;
 }
 
+.search-table{
+    padding: 1rem;
+    float: right;
+}
+
+
+.search-table form input[type=search]{
+    width: 30vh;
+    padding-left: 5px;
+}
+
 .table-card .name-crud{
     display: flex;
     justify-content: space-between;
@@ -393,6 +404,11 @@ section.recent{
     
 }
 
+.table-card form.form-type img{
+    margin-top: 1rem;
+    width: 100px;
+}
+
 .table-card form.form-type input:focus,
 form.form-type input:valid{
     border-color: var(--main-color);
@@ -408,6 +424,24 @@ form.form-type input:valid{
     border-radius: 7px;
     cursor: pointer;
 }
+
+.table-card .pagination-admin{
+    margin: 1rem .5rem;
+    float: right;
+}
+
+.table-card .pagination-admin a{
+    display: inline-block;
+    padding: .2rem .7rem;
+    border-radius: 5px;
+}
+
+.table-card .pagination-admin a.active{
+    background: #4158d0;
+    color: #fff;
+}
+
+
 
 
 
