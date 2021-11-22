@@ -18,7 +18,7 @@
                 <label for="var2">Nama Kategori</label>
                 <input type="text" name="category" id="var2" required>
             </div>
-            <button type="submit">Simpan</button>
+            <button type="submit" class="publish">Simpan</button>
         </form>
     </div>
 </div>

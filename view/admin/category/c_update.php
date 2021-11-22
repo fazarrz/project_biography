@@ -16,13 +16,13 @@
         <input type="hidden" name="id" value="<?= $data['id_category']?>">
             <div class="input-form">
                 <label for="var1">Gambar</label>
-                <input type="file" name="image" id="var1" required>
+                <input type="file" name="image" id="var1" value="<?= $data['img_category']?>" required>
                 <img src="../../assets/images/<?= $data['img_category']?>">
             </div><br>
             <div class="input-form">
                 <label for="var2">Nama Kategori</label>
                 <input type="text" name="category" id="var2" required value="<?= $data['name_category']?>">
             </div>
-            <button type="submit">Simpan</button>
+            <button type="submit" class="publish">Simpan</button>
         </form>
     </div>

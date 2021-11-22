@@ -259,23 +259,6 @@ section.recent{
     background: #f9fafc;
 }
 
-.badge{
-    padding: .4rem .8rem;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: .7rem;
-}
-
-.badge.danger{
-    background: red;
-    color: #fff;
-}
-
-.badge.success{
-    background: #DEF7EC;
-    color: var(--main-color);
-}
-
 .summary-card{
     margin-bottom: 1.5rem;
     padding-top: .5rem;
@@ -351,7 +334,8 @@ section.recent{
 }
 
 
-.table-card .name-crud a{
+.table-card .name-crud a,
+a.button-view{
     background: var(--main-color);
     padding: .6rem 1rem;  
     color: #fff;
@@ -359,7 +343,6 @@ section.recent{
     border-radius: 7px;
     font-weight: 600;
 }
-
 
 .table-card table td a.button-warning{
     background: rgba(252, 252, 0, 0.966);
@@ -388,15 +371,31 @@ section.recent{
     color: var(--color-dark);
 }
 
-.table-card form.form-type input{
+.table-card form.form-type input,
+.table-card form.form-type select{
     width: 100%;
     height: 35px;
     outline: none;
 	font-size: 15px;
-	padding-left: 18px;
+	padding-left: 12px;
 	border: 1px solid lightgrey;
 	border-radius: 7px;
+    background: none;
     
+}
+
+.table-card .input-form textarea{
+    width: 100%;
+    font-size: 14px;
+    border-radius: 7px;
+    border: none;
+    border: 1px solid lightgrey;
+    padding: 6px;
+}
+
+
+.table-card form.form-type .input-form{
+    margin-bottom: 1rem;
 }
 
 .table-card form.form-type input[type=file]{
@@ -410,16 +409,31 @@ section.recent{
 }
 
 .table-card form.form-type input:focus,
-form.form-type input:valid{
+form.form-type input:valid,
+.table-card form.form-type select:focus,
+.table-card form.form-type select:valid,
+.table-card .input-form textarea:focus,
+.table-card .input-form textarea:valid{
     border-color: var(--main-color);
 }
 
-.table-card form.form-type button[type='submit']{
+.table-card form.form-type button.publish{
     border: none;
     padding: .5rem 1rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
     background: var(--main-color);
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.table-card form.form-type button.simpan{
+    border: none;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background: green;
     color: #fff;
     border-radius: 7px;
     cursor: pointer;

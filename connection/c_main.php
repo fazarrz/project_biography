@@ -26,6 +26,21 @@
             case 'category_edit':
                 include 'category/c_edit.php';
                 break;
+            case 'biography':
+                include 'biography/b_read.php';
+                break;
+            case 'biography_create':
+                include 'biography/b_create.php';
+                break;
+            case 'biography_insert':
+                include 'biography/b_insert.php';
+                break;
+            case 'biography_update':
+                include 'biography/b_update.php';
+                break;
+            case 'biography_edit':
+                include 'biography/b_edit.php';
+                break;
             default:
                 header('Location:index.php');
         }

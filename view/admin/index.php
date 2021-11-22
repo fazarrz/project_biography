@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="?hal=biography">
                             <span class="fa fa-address-book-o"></span>
                             <span>Biografi</span>
                         </a>
@@ -85,6 +85,7 @@
                     <h2>Administrator</h2>
                 </div>
                 <div class="social-icons">
+                    <?php echo $_SESSION['name_user']?>
                     <div></div>
                 </div>
             </header>
