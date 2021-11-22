@@ -94,7 +94,7 @@
                     <td>
                         <a href="?hal=biography_update&id=<?= $data['id_bio']?>" class="button-warning"><span class="fa fa-cog"></span></a>
                         <a href="?hal=biography_delete&id=<?= $data['id_bio']?>&foto=<?= $data['img_bio']?>" class="button-delete"><span class="fa fa-trash"></span></a>
-                        <a href="#" class="button-view"><span class="fa fa-eye"></span></a>
+                        <a href="?hal=biography_view&id=<?= $data['id_bio']?>" class="button-view"><span class="fa fa-eye"></span></a>
                     </td>
                 </tr>
             <?php }?>

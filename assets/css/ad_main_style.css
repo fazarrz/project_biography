@@ -455,6 +455,21 @@ form.form-type input:valid,
     color: #fff;
 }
 
+.content-view{
+    text-align: justify;
+}
+
+.content-view .content{
+    padding: 1.2rem;
+}
+
+.content-view .content .title-content{
+    text-align: center;
+}
+
+.content-view .content .content-real{
+    margin-top: 1.8rem;
+}
 
 
 

@@ -41,6 +41,12 @@
             case 'biography_edit':
                 include 'biography/b_edit.php';
                 break;
+            case 'biography_delete':
+                include 'biography/b_delete.php';
+                break;
+            case 'biography_view':
+                include 'biography/b_view.php';
+                break;
             default:
                 header('Location:index.php');
         }
