@@ -2,14 +2,14 @@
 
     if(!defined('INDEX')) die("");
 
-    if (isset($_POST['search_category'])) {
-        $search = $_POST['search_category'];
+    if (isset($_POST['search_comment'])) {
+        $search = $_POST['search_comment'];
 
     }else {
         $search = "";
     }
 
-    $data_search  = mysqli_query($conn, "SELECT * FROM tbl_category WHERE name_category LIKE '%$search%'");
+    $data_search  = mysqli_query($conn, "SELECT * FROM tbl_comment JOIN tbl_biography ON tbl_comment.id_bio = tbl_biography.id_bio WHERE name_comment LIKE '%$search%'");
 
     $data_page = 5;
     $data_all  = mysqli_num_rows($data_search);
@@ -38,28 +38,29 @@
         $end_number = $a;
     }
 
-    $data_page_hal = mysqli_query($conn, "SELECT * FROM tbl_category WHERE name_category LIKE '%$search%' LIMIT $b,$data_page");
+    $data_page_hal = mysqli_query($conn, "SELECT * FROM tbl_comment JOIN tbl_biography ON tbl_comment.id_bio = tbl_biography.id_bio WHERE name_comment LIKE '%$search%' LIMIT $b,$data_page");
 ?>
 
-<h2 class="dashboard-title">Kategori</h2>
+<h2 class="dashboard-title">Komentar</h2>
 <div class="table-cards">
     <div class="table-card">
         <div class="name-crud">
-            <h3>Data Kategori</h3>
-            <a href="?hal=category_create"><span class="fa fa-plus"></span></a>
+            <h3>Data Komentar</h3>
         </div>
         <div class="search-table">
             <form action="?hal=category" method="post">
                 <label for="search1">Cari :</label>
-                <input type="search" name="search_category" id="search2" >
+                <input type="search" name="search_comment" id="search2" >
             </form>
         </div>
         <table>
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Gambar</th>
-                    <th>Nama Kategori</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Biografi</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -74,11 +75,21 @@
             
                 <tr>
                     <td><?= $no?></td>
-                    <td><img src="../../assets/images/category/<?= $data['img_category']?>"></td>
-                    <td><?= $data['name_category']?></td>
+                    <td><?= $data['name_comment']?></td>
+                    <td><?= $data['email_comment']?></td>
+                    <td><?= $data['title_bio']?></td>
                     <td>
-                        <a href="?hal=category_update&id=<?= $data['id_category']?>" class="button-warning"><span class="fa fa-cog"></span></a>
-                        <a href="?hal=category_delete&id=<?= $data['id_category']?>&foto=<?= $data['img_category']?>" class="button-delete"><span class="fa fa-trash"></span></a>
+                        <?php
+                            if ($data['status_comment'] == 1) {
+                                echo "Aktif";
+                            }else{
+                                echo "Hidden";
+                            }                        
+                        ?>
+                    </td>
+                    <td>
+                        <a href="?hal=comment_delete&id=<?= $data['id_comment']?>" class="button-delete"><span class="fa fa-trash"></span></a>
+                        <a href="?hal=comment_view&id=<?= $data['id_comment']?>" class="button-view"><span class="fa fa-eye"></span></a>
                     </td>
                 </tr>
             <?php }?>
@@ -86,18 +97,18 @@
         </table>
         <div class="pagination-admin">
             <?php if($page > 1) :?>
-                <a href="?hal=category&page=<?php echo $page - 1?>">
+                <a href="?hal=comment&page=<?php echo $page - 1?>">
                     &laquo;
                 </a>
             <?php endif?>
             <?php for ($i=$star_number; $i <= $end_number; $i++) : ?>
 
                 <?php if($page == $i) :?>
-                <a href="?hal=category&page= <?php echo $i?>" class="active">
+                <a href="?hal=comment&page= <?php echo $i?>" class="active">
                     <?php echo $i?>
                 </a>
                 <?php else:?>
-                <a href="?hal=category&page= <?php echo $i?>">
+                <a href="?hal=comment&page= <?php echo $i?>">
                     <?php echo $i?>
                 </a>
                 <?php endif;?>
@@ -105,7 +116,7 @@
             <?php endfor;?>
 
             <?php if($page < $a) :?>
-                <a href="?hal=category&page=<?php echo $page + 1?>">
+                <a href="?hal=comment&page=<?php echo $page + 1?>">
                     &raquo;
                 </a>
             <?php endif?>

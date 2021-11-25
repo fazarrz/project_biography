@@ -79,7 +79,7 @@
                 <tr>
                     <td><?= $no;?></td>
                     <td><?= $data['name_category']?></td>
-                    <td><img src="../../assets/images/<?= $data['img_bio']?>"></td>
+                    <td><img src="../../assets/images/biography/<?= $data['img_bio']?>"></td>
                     <td><?= $data['title_bio']?></td>   
                     <td><?= date("d-m-Y",strtotime($data['tgl_bio']))?></td>
                     <td>

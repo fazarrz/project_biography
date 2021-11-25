@@ -40,7 +40,7 @@
             </div>
             <div class="sidebar-menu">
                 <ul>
-                    <li class="active">
+                    <li>
                         <a href="?hal=dashboard">
                             <span class="fa fa-line-chart"></span>
                             <span>Beranda</span>
@@ -59,9 +59,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <span class="fa fa-user"></span>
-                            <span>Pengguna</span>
+                        <a href="?hal=comment">
+                            <span class="fa fa-comment"></span>
+                            <span>Komentar</span>
                         </a>
                     </li>
                     <li>
@@ -72,8 +72,8 @@
                     </li>
                     <li>
                         <a href="">
-                            <span class="fa fa-cog"></span>
-                            <span>Pengaturan</span>
+                            <span class="fa fa-sign-out"></span>
+                            <span>Keluar</span>
                         </a>
                     </li>
                 </ul>

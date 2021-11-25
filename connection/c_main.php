@@ -47,6 +47,15 @@
             case 'biography_view':
                 include 'biography/b_view.php';
                 break;
+            case 'comment':
+                include 'comment/cm_read.php';
+                break;
+            case 'comment_view':
+                include 'comment/cm_view.php';
+                break;
+            case 'comment_delete':
+                include 'comment/cm_delete.php';
+                break;
             default:
                 header('Location:index.php');
         }

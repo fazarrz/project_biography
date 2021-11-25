@@ -15,10 +15,14 @@
         <form class="form-type" action="?hal=category_edit" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $data['id_category']?>">
             <div class="input-form">
-                <label for="var1">Gambar</label>
-                <input type="file" name="image" id="var1" value="<?= $data['img_category']?>" required>
-                <img src="../../assets/images/<?= $data['img_category']?>">
-            </div><br>
+                <label>Gambar Sebelumnya</label>
+                <input type="hidden" name="old_image" value="<?= $data['img_category']?>">
+                <img src="../../assets/images/category/<?= $data['img_category']?>">
+            </div>
+            <div class="input-form">
+                <label for="var1">Gambar Baru</label>
+                <input class="image-new" type="file" name="image_new" id="var1">
+            </div>
             <div class="input-form">
                 <label for="var2">Nama Kategori</label>
                 <input type="text" name="category" id="var2" required value="<?= $data['name_category']?>">

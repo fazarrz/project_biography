@@ -5,8 +5,8 @@
     $id  = $_GET['id'];
     $foto = $_GET['foto'];
 
-    if (file_exists("../../assets/images/".$foto)) {
-        unlink("../../assets/images/".$foto);
+    if (file_exists("../../assets/images/category/".$foto)) {
+        unlink("../../assets/images/category/".$foto);
     }
 
     $query = mysqli_query($conn, "DELETE FROM tbl_category WHERE id_category = '$id'");

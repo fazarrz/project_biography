@@ -7,38 +7,29 @@
 <div class="dashboard-cards">
     <div class="card-single">
         <div class="card-body">
-            <span class="fa fa-eye"></span>
+            <span id="one" class="fa fa-eye"></span>
             <div>
                 <h5>Pengakses</h5>
                 <h4>200.000</h4>
             </div>
         </div>
-        <div class="card-footer">
-            <a href="#">Lihat semua</a>
-        </div>
     </div>
     <div class="card-single">
         <div class="card-body">
-            <span class="fa fa-user"></span>
+            <span id="two" class="fa fa-folder"></span>
             <div>
-                <h5>Penulis</h5>
+                <h5>Biografi</h5>
                 <h4>150</h4>
             </div>
         </div>
-        <div class="card-footer">
-            <a href="#">Lihat semua</a>
-        </div>
     </div>
     <div class="card-single">
         <div class="card-body">
-            <span class="fa fa-folder"></span>
+            <span id="three" class="fa fa-comment"></span>
             <div>
-                <h5>Proyek</h5>
+                <h5>Komentar</h5>
                 <h4>200.000</h4>
             </div>
-        </div>
-        <div class="card-footer">
-            <a href="#">Lihat semua</a>
         </div>
     </div>
 </div>

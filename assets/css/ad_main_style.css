@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+/* Start Style */
 :root{
     --main-color: #4158d0;
     --color-dark: #1D2231;
@@ -17,11 +18,14 @@
     
 }
 
+/* End Style */
+
+/* Start Sidebar */
+
 #sidebar-toggle{
     display: none;
 
 }
-
 
 .sidebar{
     height: 100%;
@@ -35,8 +39,6 @@
     overflow-y: auto;
     transition: width 500ms;
 }
-
-
 
 .sidebar-header{
     display: flex;
@@ -52,10 +54,8 @@
 }
 
 .sidebar li{
-    padding: .9rem;
-
+    padding: .9rem 1rem;
 }
-
 
 .sidebar-menu li.active{
     background: #fff;
@@ -102,6 +102,10 @@
     left: 60px;
     width: calc(100% - 60px);
 }
+
+/* End Sidebar */
+
+/* Start Header */
 
 .main-content{
     position: relative;
@@ -153,11 +157,16 @@ header{
     border-radius: 50%;
 }
 
+/* End Header */
+
+/* Start Dashboard Admin */
+
 .main{
-    background: #f1f5f9;
+    background: #f0f4f8;
     min-height: 100vh;
     padding: 5rem 3rem;
 }
+
 
 .dashboard-title{
     color: var(--text-dark);
@@ -171,41 +180,51 @@ header{
 }
 
 .card-single{
-    background: #fff;
-    border-radius: 7px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
-.card-body{
-    padding: 1.3rem 1rem;
+.card-body{ 
     display: flex;
     align-items: center;
 }
 
-.card-body span{
+.card-body span#one{
+    border-radius: 5px 0px 0px 5px;
     font-size: 1.5rem;
-    color: #777;
-    padding: 0rem 1rem;
+    color: #fff;
+    padding: 2.3rem 1.3rem;
+    background-color: #dc3545;
+}
+
+.card-body span#two{
+    border-radius: 5px 0px 0px 5px;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2.3rem 1.3rem;
+    background-color: #ffc107;
+}
+
+.card-body span#three{
+    border-radius: 5px 0px 0px 5px;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2.3rem 1.3rem;
+    background-color: #28a745;
 }
 
 .card-body h5{
     color: var(--text-grey);
     font-size: 1rem;
+    padding-left: .9rem;
 }
 
 .card-body h4{
     color: var(--color-dark);
     font-size: 1.2rem;
     margin-top: .4rem;
-}
-
-.card-footer{
-    padding: .2rem 1rem;
-    background: #f9fafc;
-}
-
-.card-footer a{
-    color: var(--main-color);
+    padding-left: .9rem;
 }
 
 section.recent{
@@ -217,13 +236,13 @@ section.recent{
     display: grid;
     grid-template-columns: 75% 25%;
     grid-column-gap: 1.5rem;
-
 }
 
 .activity-card,
 .summary-card{
-    background: #fff;
-    border-radius: 7px;
+    background: #ffffff;
+    border-radius: 5px;
+
 }
 
 .activity-card h3{
@@ -241,6 +260,7 @@ section.recent{
 .table-card thead{
     background: #efefef;
     text-align: left;
+    
 }
 
 .activity-card th,
@@ -288,13 +308,17 @@ section.recent{
     color: var(--text-grey);
 }
 
+/* End Dashboard Admin */
+
+
+ /* Start Table Data CRUD */
 .table-cards{
     width: 100%;
 }
 
 .table-card{
-    background: #fff;
-    border-radius: 7px;
+    background: #ffffff;
+    border-radius: 5px;
 }
 
 .search-table{
@@ -304,7 +328,7 @@ section.recent{
 
 
 .search-table form input[type=search]{
-    width: 30vh;
+    width: 25vh;
     padding-left: 5px;
 }
 
@@ -323,14 +347,14 @@ section.recent{
 
 .table-card th,
 .table-card td{
-    padding: .9rem .4rem;
+    padding: .8rem .4rem;
     font-size: 1rem;
     color: var(--color-dark);
 }
 
 .table-card td img{
-    width: 80px;
-    height: 70px;
+    width: 70px;
+    height: 60px;
 }
 
 
@@ -345,20 +369,22 @@ a.button-view{
 }
 
 .table-card table td a.button-warning{
-    background: rgba(252, 252, 0, 0.966);
+    background: #ffc107;
     padding: .5rem .9rem;
     border-radius: 7px;
     color: var(--color-dark);
 }
 
 .table-card table td a.button-delete{
-    background: red;
+    background: #dc3545;
     padding: .5rem .9rem;
     border-radius: 7px;
     color: #fff;
 }
 
+/* End Table CRUD */
 
+/* Start Form CRUD */
 .table-card form.form-type{
     padding: 0rem 1rem;
 }
@@ -446,7 +472,7 @@ form.form-type input:valid,
 
 .table-card .pagination-admin a{
     display: inline-block;
-    padding: .2rem .7rem;
+    padding: .7rem 1.2rem;
     border-radius: 5px;
 }
 
@@ -468,9 +494,10 @@ form.form-type input:valid,
 }
 
 .content-view .content .content-real{
-    margin-top: 1.8rem;
+    margin-top: 2rem;
 }
 
+/* End Form CRUD */
 
 
 

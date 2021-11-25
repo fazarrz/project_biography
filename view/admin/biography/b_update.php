@@ -14,11 +14,15 @@
             <h3>Data Biografi</h3>
         </div>
         <form class="form-type" action="?hal=biography_edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?= $data['id_bio']?>">
             <div class="input-form">
-                <input type="hidden" name="id" value="<?= $data['id_bio']?>">
-                <label for="var1">Gambar</label>
-                <input type="file" name="image_bio" id="var1" required>
-                <img src="../../assets/images/<?= $data['img_bio']?>">
+                <label>Gambar Sebelumnya</label>
+                <input type="hidden" name="old_img" value="<?= $data['img_bio']?>">
+                <img src="../../assets/images/biography/<?= $data['img_bio']?>">
+            </div>
+            <div class="input-form">
+                <label for="var1">Gambar Baru</label>
+                <input type="file" name="image_new" id="var1">
             </div>
             <div class="input-form">
                 <label for="var2">Kategori</label>

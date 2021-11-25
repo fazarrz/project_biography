@@ -26,7 +26,7 @@
         
                 if (in_array($extension, $extension_true) === true) {
                     
-                    move_uploaded_file($file, "../../assets/images/".$images_bio);
+                    move_uploaded_file($file, "../../assets/images/biography/".$images_bio);
                     $query = mysqli_query($conn, "INSERT INTO tbl_biography (title_bio, text_bio, img_bio, tgl_bio, status_bio, id_category, id_user) VALUES ('$title', '$content', '$images_bio', '$tgl', '$status', '$category_bio', '$user')");
         
                     if (!$query) {
@@ -38,7 +38,7 @@
         
                 }
                 else{
-                    echo "<script>alert('Ekstensi gambar tidak sesuai');window.location='?hal=biography_create'</script>";
+                    echo "<script>alert('Ekstensi gambar tidak sesuai');window.location='?hal=biography_create&id=$_POST[id]'</script>";
                 }
             }
         }
