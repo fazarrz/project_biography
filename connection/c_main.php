@@ -56,6 +56,9 @@
             case 'comment_delete':
                 include 'comment/cm_delete.php';
                 break;
+            case 'logout':
+                include 'logout.php';
+                break;
             default:
                 header('Location:index.php');
         }

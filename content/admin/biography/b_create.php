@@ -3,6 +3,7 @@
     if(!defined('INDEX')) die("");
 
     $query_category = mysqli_query($conn, "SELECT * FROM tbl_category");
+    
 ?>
 
 <h2 class="dashboard-title">Masukan Data</h2>
@@ -34,8 +35,20 @@
             </div>
             <div class="input-form">
                 <label for="var4">Isi</label>
-                <textarea name="content" id="var4" cols="30" rows="15"></textarea>
+                <textarea name="content" id="var4" cols="30" rows="15" tabindex="1" onkeypress="paragraphs(event)"></textarea>
             </div>
+            <script>
+                function paragraphs(event) {
+                    if (event.keyCode == 13 && event.shiftKey) {
+                        document.getElementById("text").innerHTML = "enter+shift";
+                    }
+
+                    if (event.keyCode == 13 && !event.shiftKey) {
+                        document.getElementById("text").innerHTML = "enter";
+                    }
+                }
+            </script>
+            <p id="text"></p>
             <button type="submit" name="publish" class="publish">Publish</button>
             <button type="submit" name="simpan" class="simpan">Simpan Sebagai Draft</button>
         </form>

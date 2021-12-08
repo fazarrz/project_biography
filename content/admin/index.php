@@ -71,7 +71,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="?hal=logout">
                             <span class="fa fa-sign-out"></span>
                             <span>Keluar</span>
                         </a>

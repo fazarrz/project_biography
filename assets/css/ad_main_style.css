@@ -486,15 +486,33 @@ form.form-type input:valid,
 }
 
 .content-view .content{
-    padding: 1.2rem;
+    padding: 1.4rem;
 }
 
 .content-view .content .title-content{
     text-align: center;
 }
 
+.content-view .content .title-content img{
+    width: 25%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+}
+
+.content-view .content .title-content h2{
+    margin-bottom: .4rem;
+    color: var(--color-dark);
+}
+
 .content-view .content .content-real{
     margin-top: 2rem;
+    color: var(--color-dark);
+    font-size: 17px;
+}
+
+.content-view .content .content-real .view{
+    padding-top: 1rem;
 }
 
 /* End Form CRUD */

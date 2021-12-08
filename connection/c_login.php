@@ -16,13 +16,13 @@
         $_SESSION['username'] = $data['user_name'];
         $_SESSION['password'] = $data['pass_user'];
 
-        header('location: ../view/admin/index.php');
+        header('location: ../content/admin/index.php');
 
     }else{
-        header('location: ../view/admin/login.php?pesan=error');
+        header('location: ../content/admin/login.php?pesan=error');
         
     }
 
 
- $data = array("dasd", "asd", "asd");
+
 ?>
