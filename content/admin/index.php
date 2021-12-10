@@ -33,7 +33,7 @@
         <div class="sidebar">
             <div class="sidebar-header">
                 <h3 class="brand">
-                    <span class="fa fa-address-book"></span>
+                    <img src="../../assets/images/logo.png">
                     <span>biography</span>
                 </h3>
                 <label for="sidebar-toggle" class="fa fa-dedent"></label>

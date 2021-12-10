@@ -16,7 +16,7 @@
         <section class="content">
             <form class="form-content" action="../../connection/c_login.php" method="post">
                 <div class="title">
-                    <img src="../../assets/images/mardira.jpg">
+                    <img src="../../assets/images/logo.png">
                     <p>Selamat datang <b>Administrator</b></p>
                 </div>
                 <?php if(isset($_GET['pesan'])){?>
