@@ -16,44 +16,54 @@
         <title>Biography</title>
     </head>
     <body>
-        <nav class="navbar">
-            <div class="navbar-item">
-                <div class="navbar-header">
-                    <img src="../../assets/images/logo.png">
-                    <span>iography</span>
-                </div>
-                <ul>
-                    <li>
-                        <a href="?hal=dashboard" class="active">
-                            <span>Beranda</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="?hal=category">
-                            <span>Kategori</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="?hal=biography">
-                            <span>Biografi</span>
-                        </a>
-                    </li>
-                    <li>
+        <header class="header-main">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
                         <a href="#">
-                            <span>Kontak</span>
-                        </a>
-                    </li>
-                </ul>
+                            <img src="../../assets/images/logo.png">
+                            iography
+                        </a>   
+                    </div>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="toggler">
+                        <span></span>
+                    </label>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="?hal=dashboard" class="active">Beranda</a></li>
+                            <li><a href="#">Kategori</a></li>
+                            <li><a href="#">Biografi</a></li>
+                            <li><a href="#">Kontak</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </nav>
-        <div class="container">
-            <section class="content">
-                <?php
+        </header>
+        <?php
                 
-                    include '../../connection/c_main_user.php';
-                
-                ?>
-            </section>
-        </div>
+            include '../../connection/c_main_user.php';
+        
+        ?>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <h3>Biography</h3>
+                    <p>Website biografi pertama di Indonesia.</p>
+                </div>
+                <div class="social-media">
+                    <ul class="social">
+                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright &copy; 2021 Biography</p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

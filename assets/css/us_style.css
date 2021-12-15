@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+:root{
+    --main-color: #4158d0;
+    --color-dark: #1D2231;
+    --text-grey: #8390A2;
+
+}
 
 *{
     padding: 0;
@@ -11,100 +17,136 @@
 }
 
 .container{
-    width: 100%;
-    height: 100vh;
-    padding: 0 8.5%;
-    position: relative;
+    max-width: 1125px;
+    margin: auto;
 }
 
-/* Start navbar */
+/* Start Navbar */
 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 
-nav.navbar{
+.header-main{
     background: #fff;
+    padding: 15px;
     border-bottom: 1px solid #ccc;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
-nav.navbar .navbar-item{
-    padding: 0 8.5%;
+.header-main .logo{
     display: flex;
-    width: 100%;
     align-items: center;
-    flex-wrap: wrap;
-    position: relative;
+    font-size: 18px;
 }
 
-nav.navbar .navbar-header{
-    display: flex;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 10px 0;
-}
-
-nav.navbar .navbar-header img{
-    width: 25px;
-    height: 25px;
-}
-
-nav.navbar .navbar-item ul{
-    flex: 1;
-    text-align: right;
-    padding: 10px 0;
-    
-
-}
-
-nav.navbar .navbar-item ul li{
-    display: inline-block;
-    margin: 10px 10px;
-}
-
-nav.navbar ul li a{
-    font-size: 15px;
+.header-main .logo a{
     color: black;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: flex-end;
 }
 
-nav.navbar ul li a:hover,
-nav.navbar ul li a.active{
+.header-main .logo img{
+    width: 35px;
+    height: 35px;
+}
+
+.header-main .navbar ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.header-main .navbar ul li a{
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+}
+
+.header-main .navbar ul li a.active,
+.header-main .navbar ul li a:hover{
     background: #4158d0;
     color: #fff;
     font-weight: 600;
     border-radius: 5px;
     transition: .2s;
-    padding: 8px;
+    padding: 10px;
 }
 
+.header-main #check{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
 
+.toggler{
+    height: 34px;
+    width: 44px;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
 
-/* End navbar */
+.toggler span{
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    position: relative;
+}
 
+.toggler span::before,
+.toggler span::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+}
 
-/* Start Content */
+.toggler span::before{
+    top: -6px;
+}
 
-.header-content{
+.toggler span::after{
+    top: 6px;
+}
+
+/* End Navbar */
+
+/* Start Dashboard */
+.main-dashboard{
     display: flex;
-    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-content .name-header{
-    margin-top: 20px;
+.main-dashboard .name-dashboard{
     font-size: 18px;
     color: black;
+    width: 700px;
 }
 
-.header-content .name-header h1,
-.header-content .name-header p{
+.main-dashboard .name-dashboard h1,
+.main-dashboard .name-dashboard p{
     margin-bottom: 20px;
 }
 
-.header-content .name-header .search-content{
+.main-dashboard .name-dashboard .search-dashboard{
     display: flex;
+    margin-top: 10px;
 }
 
-.header-content .name-header .search-content button{
+.main-dashboard .name-dashboard .search-dashboard button{
     padding: 0 15px;
     margin-left: 5px;
     border-radius: 5px;
@@ -115,61 +157,58 @@ nav.navbar ul li a.active{
     font-size: 17px;
 }
 
-
-.header-content .name-header input[type=text]{
+.main-dashboard .name-dashboard .search-dashboard input[type=text]{
     width: 80%;
-    height: 6vh;
+    height: 40px;
     padding-left: 10px;
     border: 2px solid #4158d0;
     outline: none;
 }
 
-.header-content .image-content{
-    margin-left: 10px;
+.main-dashboard .image-dashboard{
     display: flex;
     justify-content: space-around;
+    width: 500px;
 }
 
-.header-content .image-content img{
+.main-dashboard .image-dashboard img{
     width: 100%;
-    height: auto;
+    height: 100%;
     background-repeat: no-repeat;
-
+    object-fit: contain;
+    object-position: center;
 }
 
-/* End Content */
+/* End Dashboard */
 
 /* Start Card */
 
-.content-beranda .card{
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.biography{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 }
 
-.profile-card{
-    padding: 15px 25px;
+.biography .title{
+    margin-bottom: 1rem;
+}
+
+.biography .card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-bottom: 3rem;
+}
+
+.biography .card .profile-card{
+    padding: 20px 0px;
     width: 25%;
 }
 
-.profile-content{
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid grey;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-    padding: 25px 0px;
-    min-width: 200px;
-    min-height: 220px;
-    width: 100%;
-}
-
-.profile-content .profile-image{
+.biography .card .profile-content .profile-image{
     text-align: center;
 }
 
-.profile-content .profile-image img{
+.biography .card .profile-content .profile-image img{
     width: 120px;
     height: 120px;
     border-radius: 60px;
@@ -177,10 +216,11 @@ nav.navbar ul li a.active{
     margin-bottom: 1rem;
 }
 
-.profile-content .description{
+.biography .card .profile-content .description{
     text-align: center;
     font-size: 15px;
 }
+
 
 .profile-content .description h3{
     color: #4158d0;
@@ -200,7 +240,155 @@ nav.navbar ul li a.active{
     border-radius: 8px;
 }
 
+.biography .card .profile-content{
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 15px 0px;
+    min-width: 200px;
+    min-height: 220px;
+    width: 100%;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+/* End Card */
+
+/* Start Quotes */
+
+.main-quotes{
+    background-color: #f0f4f8;
+    height: 300px;
+}
+
+.main-quotes .name-quotes{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   height: 300px;
+}
+
+.main-quotes .name-quotes h3{
+    font-size: 1.8rem;
+    color: var(--color-dark);
+}
+
+/* End Quotes */
+
+/* Start Footer */
+
+footer{
+    background: var(--main-color);
+    color: #fff;
+}
+
+footer .footer-content{
+    padding-top: 10px;
+    text-align: center;
+}
+
+footer .social-media ul.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-media li{
+    margin: 0 10px;
+}
+
+.social-media li a{
+    display: inline-block;
+}
 
 
 
 
+
+
+@media (max-width: 1200px){
+    .main-dashboard .name-dashboard{
+        font-size: 18px;
+        color: black;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 992px){
+    .main-dashboard .name-dashboard{
+        font-size: 15px;
+        color: black;
+        margin-left: 15px;
+    }
+}
+@media (max-width: 768px){
+    .toggler{
+        display: flex;
+    }
+
+    .header-main .navbar{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: var(--main-color);
+        border-top: 1px solid black;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header-main .navbar ul li{
+        display: block;
+        margin: 0;
+
+
+    }
+
+    .header-main .navbar ul li a{
+        padding: 10px;
+        color: #fff;
+    }
+
+    .header-main #check:checked ~ .navbar{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header-main #check:focus ~ .toggler{
+        box-shadow: 0 0 15px #000000;
+    }
+
+    .header-main #check:checked ~ .toggler span{
+        background-color: transparent;
+    }
+
+    .header-main #check:checked ~ .toggler span::before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .header-main #check:checked ~ .toggler span::after{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .main-dashboard .name-dashboard{
+        text-align: center;
+        color: black;
+        font-size: 13px;
+        margin-top: 30px;
+    }
+
+    .main-dashboard .name-dashboard .search-dashboard{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-dashboard .name-dashboard .search-dashboard input[type=text]{
+        width: 60%;
+    }
+
+    .main-dashboard .image-dashboard{
+        display: none;
+    }
+}
