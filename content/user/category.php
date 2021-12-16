@@ -5,15 +5,33 @@
     
 ?>
 
-<?php if ($jumlah > 0): ?>
-        
-    <?php while ($h  = mysqli_fetch_array($query_data)) :?>
-        <h1><?= $h['name_category']?></h1>
 
-    <?php endwhile;?>
+<section class="container">
+    <div class="biography">
+        <div class="title">
+            <h2>Kategori</h2>
+        </div>
+        <div class="card">
+            <?php if ($jumlah > 0) :?>
+            <?php while ($h  = mysqli_fetch_array($query_data)) :?>
+            <a href="">
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="../../assets/images/category/<?= $h['img_category']?>">
+                        </div>
+                        <div class="description">
+                            <h3><?= $h['name_category']?></h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <?php endwhile;?>
 
-
-<?php else:
-    echo "Tidak ada";
-    endif;
-?>
+            <?php else:
+                echo "Tidak ada";
+                endif;
+            ?>
+        </div>
+    </div>
+</section>

@@ -1,3 +1,11 @@
+<?php
+
+    $query_data = mysqli_query($conn, "SELECT * FROM tbl_biography JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio = 1 ORDER BY id_bio DESC");
+    $jumlah  = mysqli_num_rows($query_data);
+    
+?>
+
+
 <section class="container">
     <div class="main-dashboard">
         <div class="name-dashboard">
@@ -18,76 +26,28 @@
             <h2>Biografi Terbaru</h2>
         </div>
         <div class="card">
+            <?php if ($jumlah > 0) :?>
+            <?php while ($h  = mysqli_fetch_array($query_data)) :?>
             <div class="profile-card">
                 <div class="profile-content">
                     <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
+                        <img src="../../assets/images/biography/<?= $h['img_bio']?>">
                     </div>
                     <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
+                        <h3><?= $h['title_bio']?></h3>
+                        <small><?= $h['name_category']?></small>
                     </div>
                     <div class="button-bio">
                         <a href="#">Baca</a>
                     </div>
                 </div>
             </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile;?>
+
+            <?php else:
+                echo "Tidak ada";
+                endif;
+            ?>
         </div>
     </div>
 </section>
@@ -98,82 +58,40 @@
         </div>
     </div>
 </div>
+
+<?php
+
+    $query = mysqli_query($conn, "SELECT * FROM tbl_biography JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio = 1 ORDER BY id_bio ASC");
+    $jumlah_query  = mysqli_num_rows($query);
+?>
 <section class="container">
     <div class="biography">
         <div class="title">
             <h2>Biografi Lama</h2>
         </div>
         <div class="card">
+        <?php if ($jumlah_query > 0) :?>
+            <?php while ($b  = mysqli_fetch_array($query)) :?>
             <div class="profile-card">
                 <div class="profile-content">
                     <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
+                        <img src="../../assets/images/biography/<?= $b['img_bio']?>">
                     </div>
                     <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
+                        <h3><?= $b['title_bio']?></h3>
+                        <small><?= $b['name_category']?></small>
                     </div>
                     <div class="button-bio">
                         <a href="#">Baca</a>
                     </div>
                 </div>
             </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <img src="../../assets/images/biography/mark.jpg">
-                    </div>
-                    <div class="description">
-                        <h3>Mark</h3>
-                        <small>Teknologi</small>
-                    </div>
-                    <div class="button-bio">
-                        <a href="#">Baca</a>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile;?>
+
+            <?php else:
+                echo "Tidak ada";
+                endif;
+            ?>
         </div>
     </div>
 </section>

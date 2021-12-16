@@ -282,23 +282,35 @@ footer{
 }
 
 footer .footer-content{
-    padding-top: 10px;
+    padding-top: 20px;
     text-align: center;
 }
 
-footer .social-media ul.social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+footer .footer-content h3{
+    font-size: 25px;
 }
 
-.social-media li{
-    margin: 0 10px;
+.social-media{
+    text-align: center;
+    margin-top: 30px;
 }
 
-.social-media li a{
-    display: inline-block;
+.social-media a{
+    padding: 5px 12px;
+    font-size: 18px;
+    background-color: #fff;
+    border-radius: 40px;
+    color: var(--color-dark);
+}
+
+.footer-bottom{
+    background-color: var(--main-color);
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    background: #546ff5;
+    padding: 5px 0px 5px;
+
 }
 
 
@@ -312,6 +324,15 @@ footer .social-media ul.social{
         color: black;
         margin-left: 15px;
     }
+
+    .biography{
+        margin-left: 15px;
+    }
+
+    .main-quotes .name-quotes h3{
+        font-size: 1.5rem;
+        color: var(--color-dark);
+    }
 }
 
 @media (max-width: 992px){
@@ -321,6 +342,7 @@ footer .social-media ul.social{
         margin-left: 15px;
     }
 }
+
 @media (max-width: 768px){
     .toggler{
         display: flex;
@@ -391,4 +413,32 @@ footer .social-media ul.social{
     .main-dashboard .image-dashboard{
         display: none;
     }
+
+    .biography .title{
+        font-size: 15px;
+    }
+
+    .main-quotes .name-quotes h3{
+        font-size: 1.2rem;
+        color: var(--color-dark);
+    }
+
+}
+
+@media (max-width: 468px){
+    .biography{
+        text-align: center;
+    }
+
+    .biography .title{
+        font-size: 14px;
+    }
+
+    .biography .card{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+
 }

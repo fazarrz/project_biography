@@ -32,7 +32,7 @@
                     <nav class="navbar">
                         <ul>
                             <li><a href="?hal=dashboard" class="active">Beranda</a></li>
-                            <li><a href="#">Kategori</a></li>
+                            <li><a href="?hal=category">Kategori</a></li>
                             <li><a href="#">Biografi</a></li>
                             <li><a href="#">Kontak</a></li>
                         </ul>
@@ -47,22 +47,18 @@
         ?>
 
         <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <h3>Biography</h3>
-                    <p>Website biografi pertama di Indonesia.</p>
-                </div>
-                <div class="social-media">
-                    <ul class="social">
-                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                        <li><a href="#"><span class="fa fa-youtube"></span></a></li>
-                    </ul>
-                </div>
-                <div class="footer-bottom">
-                    <p>Copyright &copy; 2021 Biography</p>
-                </div>
+            <div class="footer-content">
+                <h3>Biography</h3>
+                <p>Website biografi pertama di Indonesia.</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="#"><span class="fa fa-instagram"></span></a>
+                <a href="#"><span class="fa fa-twitter"></span></a>
+                <a href="#"><span class="fa fa-youtube"></span></a>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2021 Biography</p>
             </div>
         </footer>
     </body>
