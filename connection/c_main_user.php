@@ -1,6 +1,6 @@
 <?php
 
-    $halaman  = array("dashboard", "category", "biography");
+    $halaman  = array("dashboard", "category", "biography", "content_bio");
 
     if(isset($_GET['hal'])) $hal = $_GET['hal'];
     else $hal = "dashboard";

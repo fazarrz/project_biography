@@ -82,7 +82,7 @@
                         <small><?= $b['name_category']?></small>
                     </div>
                     <div class="button-bio">
-                        <a href="#">Baca</a>
+                        <a href="?hal=content_bio">Baca</a>
                     </div>
                 </div>
             </div>
