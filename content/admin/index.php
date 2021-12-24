@@ -65,12 +65,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <span class="fa fa-folder"></span>
-                            <span>Riwayat</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="?hal=logout">
                             <span class="fa fa-sign-out"></span>
                             <span>Keluar</span>

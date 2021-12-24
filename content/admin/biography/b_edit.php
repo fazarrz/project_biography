@@ -17,6 +17,7 @@
             $category_bio = $_POST['category_bio'];
             $title = $_POST['title'];
             $content = $_POST['content'];
+            date_default_timezone_set('Asia/Jakarta');
             $tgl = date("Y-m-d H:i:s");
 
             $extension_true = array('jpg', 'jpeg', 'png');

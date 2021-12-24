@@ -33,7 +33,7 @@
                         <ul>
                             <li><a href="?hal=dashboard" class="active">Beranda</a></li>
                             <li><a href="?hal=category">Kategori</a></li>
-                            <li><a href="#">Biografi</a></li>
+                            <li><a href="?hal=biography">Biografi</a></li>
                             <li><a href="#">Kontak</a></li>
                         </ul>
                     </nav>

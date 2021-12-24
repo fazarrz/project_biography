@@ -377,6 +377,134 @@ footer .footer-content h3{
     font-size: 1rem;
 }
 
+.comment{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.comment-content{
+    position: relative;
+    max-width: 400px;
+    height: auto;
+    margin: 20px 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.name-comment{
+    display: flex;
+    align-items: center;
+}
+
+.name-comment h4{
+    padding-right: 10px;
+}
+
+.content-comment{
+    min-height: 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 300px;
+    text-align: start;
+    margin-top: 1rem;
+}
+
+.form-comment{
+    border-top: 1px solid black;
+    margin-top: 3rem;
+}
+
+.header-form{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+form.content-form{
+    margin-top: 2rem;
+    max-width: 400px;
+    font-size: 15px;
+}
+
+form.content-form .data-comment{
+	width: 100%;
+	margin-top: 10px;
+}
+
+form.content-form .data-comment label{
+    display: block;
+    margin-bottom: .8rem;
+    font-weight: 600;
+}
+
+form.content-form .data-comment input{
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+    outline: none;
+    padding-left: 10px;
+}
+
+form.content-form .data-comment textarea{
+    width: 100%;
+    border: 1px solid black;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-comment button[type=submit]{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    background: none;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search-biography{
+    background: #f0f4f8;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-searching{
+    color: var(--color-dark);
+    width: 650px;
+}
+
+.bio-searching h3{
+    margin-bottom: 2rem;
+    font-size: 35px;
+}
+
+.bio-searching input{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    padding-left: 20px;
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 30px;
+}
+
+
+
+
 
 
 
@@ -390,6 +518,10 @@ footer .footer-content h3{
     }
 
     .biography{
+        margin-left: 15px;
+    }
+
+    .content-bio{
         margin-left: 15px;
     }
 
@@ -503,6 +635,12 @@ footer .footer-content h3{
         grid-template-columns: auto;
         grid-template-rows: auto;
         justify-content: center;
+    }
+
+    .content-grid{
+        display: grid;
+        grid-template-columns: 94% 6%;
+        grid-column-gap: 1.5rem;
     }
 
 }

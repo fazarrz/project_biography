@@ -15,15 +15,6 @@
     <div class="table-card">
         <div class="name-crud">
             <h3>Detail Komentar</h3>
-            <p>Status: <?php if ($data['status_comment'] == 1) {
-                echo "Aktif";
-
-            }else{
-                echo "Hidden";
-            }
-            
-            ?>
-            </p>
         </div>
         <div class="content-view">
             <div class="content">

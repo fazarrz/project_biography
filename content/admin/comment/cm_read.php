@@ -60,7 +60,6 @@
                     <th>Nama</th>
                     <th>Email</th>
                     <th>Biografi</th>
-                    <th>Status</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -78,15 +77,6 @@
                     <td><?= $data['name_comment']?></td>
                     <td><?= $data['email_comment']?></td>
                     <td><?= $data['title_bio']?></td>
-                    <td>
-                        <?php
-                            if ($data['status_comment'] == 1) {
-                                echo "Aktif";
-                            }else{
-                                echo "Hidden";
-                            }                        
-                        ?>
-                    </td>
                     <td>
                         <a href="?hal=comment_delete&id=<?= $data['id_comment']?>" class="button-delete"><span class="fa fa-trash"></span></a>
                         <a href="?hal=comment_view&id=<?= $data['id_comment']?>" class="button-view"><span class="fa fa-eye"></span></a>

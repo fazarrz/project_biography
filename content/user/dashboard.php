@@ -38,7 +38,7 @@
                         <small><?= $h['name_category']?></small>
                     </div>
                     <div class="button-bio">
-                        <a href="#">Baca</a>
+                        <a href="?hal=content_bio&id=<?= $h['id_bio']?>">Baca</a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                         <small><?= $b['name_category']?></small>
                     </div>
                     <div class="button-bio">
-                        <a href="?hal=content_bio">Baca</a>
+                        <a href="?hal=content_bio&id=<?= $b['id_bio']?>">Baca</a>
                     </div>
                 </div>
             </div>
