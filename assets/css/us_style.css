@@ -461,7 +461,7 @@ form.content-form .data-comment textarea{
 }
 
 .search-biography{
-    background: var(--main-color);
+    background: #f0f4f8;
     text-align: center;
     width: 100%;
     height: 300px;
@@ -479,7 +479,7 @@ form.content-form .data-comment textarea{
 .bio-searching h3{
     margin-bottom: 2rem;
     font-size: 35px;
-    color: #fff;
+    color: var(--color-dark);
 }
 
 .bio-searching input{
@@ -490,6 +490,21 @@ form.content-form .data-comment textarea{
     font-size: 20px;
     border: 1px solid black;
     border-radius: 30px;
+}
+
+.pagination-admin{
+   text-align: center;
+}
+
+.pagination-admin a{
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    border-radius: 5px;
+}
+
+.pagination-admin a.active{
+    background: #4158d0;
+    color: #fff;
 }
 
 

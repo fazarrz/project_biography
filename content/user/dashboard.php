@@ -1,6 +1,6 @@
 <?php
 
-    $query_data = mysqli_query($conn, "SELECT * FROM tbl_biography JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio = 1 ORDER BY id_bio DESC");
+    $query_data = mysqli_query($conn, "SELECT * FROM tbl_biography JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio = 1 ORDER BY id_bio DESC LIMIT 5");
     $jumlah  = mysqli_num_rows($query_data);
     
 ?>
@@ -60,7 +60,7 @@
 
 <?php
 
-    $query = mysqli_query($conn, "SELECT * FROM tbl_biography JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio = 1 ORDER BY id_bio ASC");
+    $query = mysqli_query($conn, "SELECT * FROM tbl_biography JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio = 1 ORDER BY id_bio ASC LIMIT 5");
     $jumlah_query  = mysqli_num_rows($query);
 ?>
 <section class="container">

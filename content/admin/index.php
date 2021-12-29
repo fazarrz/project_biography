@@ -34,7 +34,7 @@
             <div class="sidebar-header">
                 <h3 class="brand">
                     <img src="../../assets/images/logo.png">
-                    <span>biography</span>
+                    <span>iography</span>
                 </h3>
                 <label for="sidebar-toggle" class="fa fa-dedent"></label>
             </div>

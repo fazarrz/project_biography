@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="row">
                     <div class="logo">
-                        <a href="#">
+                        <a href="?hal=dashboard">
                             <img src="../../assets/images/logo.png">
                             iography
                         </a>   
@@ -34,7 +34,7 @@
                             <li><a href="?hal=dashboard" class="active">Beranda</a></li>
                             <li><a href="?hal=category">Kategori</a></li>
                             <li><a href="?hal=biography">Biografi</a></li>
-                            <li><a href="#">Kontak</a></li>
+                            <li><a href="?hal=contact">Kontak</a></li>
                         </ul>
                     </nav>
                 </div>

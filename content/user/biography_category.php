@@ -1,16 +1,11 @@
 <?php
 
-    if (isset($_POST['cari_bio'])) {
-        $search_bio = $_POST['cari_bio'];
-
-    }else {
-        $search_bio = "";
-    }
-
-    $query_data_bio = mysqli_query($conn, "SELECT * FROM tbl_biography JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio = 1 AND title_bio LIKE '%$search_bio%' ORDER BY id_bio DESC");
+     
+    $query = mysqli_query($conn, "SELECT * FROM tbl_biography WHERE status_bio=1 AND id_category = '$_GET[id]' ORDER BY id_bio DESC");
+    
 
     $data_page = 5;
-    $data_all  = mysqli_num_rows($query_data_bio);
+    $data_all  = mysqli_num_rows($query);
     $a = ceil($data_all / $data_page);
     
     if (isset($_GET['page'])) {
@@ -36,30 +31,25 @@
         $end_number = $a;
     }
 
-    $data_page_hal_bio = mysqli_query($conn, "SELECT * FROM tbl_biography  JOIN tbl_category ON tbl_biography.id_category = tbl_category.id_category WHERE status_bio=1 AND title_bio LIKE '%$search_bio%' LIMIT $b,$data_page");
-
+    $query_data = mysqli_query($conn, "SELECT * FROM tbl_biography WHERE status_bio=1 AND id_category = '$_GET[id]' LIMIT $b,$data_page");
     
-    $jml_query = mysqli_num_rows($data_page_hal_bio);
+    $jml_query = mysqli_num_rows($query_data);
 
 ?>
 
 
 
 
-
 <div class="search-biography">
     <div class="bio-searching">
-        <h3>Cari biografi favoritmu..</h3>
-        <form action="?hal=biography" method="post">
-            <input type="text" placeholder="Cari biografi..." name="cari_bio">
-        </form>
+        <h3><?php echo $_GET['name']?></h3>
     </div>
 </div>
 <div class="container">
     <div class="biography">
         <div class="card">
             <?php if ($jml_query > 0) :?>
-            <?php while ($h  = mysqli_fetch_array($data_page_hal_bio)) :?>
+            <?php while ($h  = mysqli_fetch_array($query)) :?>
             <div class="profile-card">
                 <div class="profile-content">
                     <div class="profile-image">
@@ -67,7 +57,6 @@
                     </div>
                     <div class="description">
                         <h3><?= $h['title_bio']?></h3>
-                        <small><?= $h['name_category']?></small>
                     </div>
                     <div class="button-bio">
                         <a href="?hal=content_bio&id=<?= $h['id_bio']?>">Baca</a>
@@ -81,7 +70,6 @@
                 endif;
             ?>
         </div>
-
         <div class="pagination-admin">
             <?php if($page > 1) :?>
                 <a href="?hal=biography&page=<?php echo $page - 1?>">
