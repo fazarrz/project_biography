@@ -146,23 +146,12 @@
     margin-top: 10px;
 }
 
-.main-dashboard .name-dashboard .search-dashboard button{
-    padding: 0 15px;
-    margin-left: 5px;
-    border-radius: 5px;
-    border: none;
-    background-color: #4158d0;
+.main-dashboard .name-dashboard .search-dashboard a{
+    background: var(--main-color);
+    padding: 10px 15px;
     color: #fff;
-    cursor: pointer;
-    font-size: 17px;
-}
-
-.main-dashboard .name-dashboard .search-dashboard input[type=text]{
-    width: 80%;
-    height: 40px;
-    padding-left: 10px;
-    border: 2px solid #4158d0;
-    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
 }
 
 .main-dashboard .image-dashboard{
@@ -472,7 +461,7 @@ form.content-form .data-comment textarea{
 }
 
 .search-biography{
-    background: #f0f4f8;
+    background: var(--main-color);
     text-align: center;
     width: 100%;
     height: 300px;
@@ -490,6 +479,7 @@ form.content-form .data-comment textarea{
 .bio-searching h3{
     margin-bottom: 2rem;
     font-size: 35px;
+    color: #fff;
 }
 
 .bio-searching input{
@@ -498,7 +488,7 @@ form.content-form .data-comment textarea{
     outline: none;
     padding-left: 20px;
     font-size: 20px;
-    border: 1px solid var(--main-color);
+    border: 1px solid black;
     border-radius: 30px;
 }
 

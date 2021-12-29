@@ -11,10 +11,9 @@
         <div class="name-dashboard">
             <h1>Selamat Datang Di Biography</h1>
             <p>Disini kamu bisa melihat dan membaca biografi tokoh-tokoh terkenal dari era dahulu ataupun era sekarang.</p>
-            <small>Biografi apa yang ingin anda cari hari ini ?</small>
+            <small>Biografi apa yang ingin kamu cari hari ini ?</small>
             <div class="search-dashboard">
-                <input type="text" placeholder="Cari biografi....">
-                <button><span class="fa fa-search"></span></button>
+                <a href="?hal=biography">Baca Sekarang</a>
             </div>
         </div>
         <div class="image-dashboard">

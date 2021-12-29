@@ -14,7 +14,7 @@
         <div class="card">
             <?php if ($jumlah > 0) :?>
             <?php while ($h  = mysqli_fetch_array($query_data)) :?>
-            <a href="">
+            <a href="?hal=biography&id=<?= $h['id_category']?>">
                 <div class="profile-card">
                     <div class="profile-content">
                         <div class="profile-image">
