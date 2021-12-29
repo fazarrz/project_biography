@@ -1,11 +1,11 @@
-var side_active = document.getElementsByClassName('sidebar-menu');
-var active = document.getElementsByClassName('active');
+const lokasi = location.href;
+const itemnya  = document.querySelectorAll('a');
+const pi = itemnya.length
 
-for (var i = 0; i < active.length; i++) {
-    active[i].addEventListener('click', function(){
-        var current = document.getElementsByClassName('active');
-        current[0].className = current[0].className.replace('active','');
-        this.className += 'active';
-    })
+for (let i = 0; i<pi; i++) {
+    
+    if(itemnya[i].href === lokasi){
+        itemnya[i].className = "active";
+    }
     
 }

@@ -24,8 +24,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../assets/css/ad_main_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="../../assets/js/c_ad.js"></script>
-        <title>Admin | Beranda</title>
+        <title>Admin</title>
     </head>
     <body>
 
@@ -62,6 +61,12 @@
                         <a href="?hal=comment">
                             <span class="fa fa-comment"></span>
                             <span>Komentar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?hal=comment">
+                            <span class="fa fa-user"></span>
+                            <span>Akun Admin</span>
                         </a>
                     </li>
                     <li>

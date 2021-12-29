@@ -31,7 +31,7 @@
                     </label>
                     <nav class="navbar">
                         <ul>
-                            <li><a href="?hal=dashboard" class="active">Beranda</a></li>
+                            <li><a href="?hal=dashboard">Beranda</a></li>
                             <li><a href="?hal=category">Kategori</a></li>
                             <li><a href="?hal=biography">Biografi</a></li>
                             <li><a href="?hal=contact">Kontak</a></li>
@@ -61,5 +61,7 @@
                 <p>Copyright &copy; 2021 Biography</p>
             </div>
         </footer>
+
+        <script type="text/javascript" src="../../assets/js/c_ad.js"></script>
     </body>
 </html>
