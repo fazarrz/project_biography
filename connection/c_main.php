@@ -56,6 +56,24 @@
             case 'comment_delete':
                 include 'comment/cm_delete.php';
                 break;
+            case 'account':
+                include 'account/ac_read.php';
+                break;
+            case 'account_create':
+                include 'account/ac_create.php';
+                break;
+            case 'account_insert':
+                include 'account/ac_insert.php';
+                break;
+            case 'account_update':
+                include 'account/ac_update.php';
+                break;
+            case 'account_edit':
+                include 'account/ac_edit.php';
+                break;
+            case 'account_delete':
+                include 'account/ac_delete.php';
+                break;
             case 'logout':
                 include 'logout.php';
                 break;

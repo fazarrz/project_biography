@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="?hal=comment">
+                        <a href="?hal=account">
                             <span class="fa fa-user"></span>
                             <span>Akun Admin</span>
                         </a>
